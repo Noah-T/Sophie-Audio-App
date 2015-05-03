@@ -13,6 +13,7 @@
 		DEC164541AF6AA5C0075B87F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEC164531AF6AA5C0075B87F /* Images.xcassets */; };
 		DEC164571AF6AA5C0075B87F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC164551AF6AA5C0075B87F /* LaunchScreen.xib */; };
 		DEC164631AF6AA5C0075B87F /* HitRecordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC164621AF6AA5C0075B87F /* HitRecordTests.swift */; };
+		DEC1646D1AF6ABBD0075B87F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC1646C1AF6ABBD0075B87F /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		DEC1645C1AF6AA5C0075B87F /* HitRecordTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HitRecordTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEC164611AF6AA5C0075B87F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEC164621AF6AA5C0075B87F /* HitRecordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitRecordTests.swift; sourceTree = "<group>"; };
+		DEC1646C1AF6ABBD0075B87F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEC1646D1AF6ABBD0075B87F /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +62,7 @@
 		DEC1643E1AF6AA5C0075B87F = {
 			isa = PBXGroup;
 			children = (
+				DEC1646C1AF6ABBD0075B87F /* AVFoundation.framework */,
 				DEC164491AF6AA5C0075B87F /* HitRecord */,
 				DEC1645F1AF6AA5C0075B87F /* HitRecordTests */,
 				DEC164481AF6AA5C0075B87F /* Products */,

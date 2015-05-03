@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E11f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="HitRecord" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,7 +15,86 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JiR-4b-qSi">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Record">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="177" y="285" width="50" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="recordAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="K3c-I2-M6S"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x6M-tt-Spu">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="177" y="323" width="30" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="playAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="CFR-Fo-cfm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rcg-O4-Mhe">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="177" y="361" width="33" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="stopAudio:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="36e-wc-jkA"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="x6M-tt-Spu" secondAttribute="centerX" id="TXp-7k-FH3"/>
+                            <constraint firstItem="x6M-tt-Spu" firstAttribute="top" secondItem="JiR-4b-qSi" secondAttribute="bottom" constant="8" id="VA0-L9-iKh"/>
+                            <constraint firstAttribute="centerY" secondItem="JiR-4b-qSi" secondAttribute="centerY" id="YUP-B8-bL3"/>
+                            <constraint firstAttribute="centerX" secondItem="Rcg-O4-Mhe" secondAttribute="centerX" id="rv6-M3-aW7"/>
+                            <constraint firstItem="Rcg-O4-Mhe" firstAttribute="top" secondItem="x6M-tt-Spu" secondAttribute="bottom" constant="8" id="sBq-4u-mdu"/>
+                            <constraint firstAttribute="centerX" secondItem="JiR-4b-qSi" secondAttribute="centerX" id="sDC-AP-fKd"/>
+                            <constraint firstAttribute="centerX" secondItem="JiR-4b-qSi" secondAttribute="centerX" id="xdh-DS-HFw"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="JiR-4b-qSi"/>
+                                <exclude reference="x6M-tt-Spu"/>
+                                <exclude reference="Rcg-O4-Mhe"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="YUP-B8-bL3"/>
+                                <exclude reference="sDC-AP-fKd"/>
+                                <exclude reference="xdh-DS-HFw"/>
+                                <exclude reference="TXp-7k-FH3"/>
+                                <exclude reference="VA0-L9-iKh"/>
+                                <exclude reference="rv6-M3-aW7"/>
+                                <exclude reference="sBq-4u-mdu"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="JiR-4b-qSi"/>
+                                <include reference="x6M-tt-Spu"/>
+                                <include reference="Rcg-O4-Mhe"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="YUP-B8-bL3"/>
+                                <include reference="sDC-AP-fKd"/>
+                                <include reference="xdh-DS-HFw"/>
+                                <include reference="TXp-7k-FH3"/>
+                                <include reference="VA0-L9-iKh"/>
+                                <include reference="rv6-M3-aW7"/>
+                                <include reference="sBq-4u-mdu"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
